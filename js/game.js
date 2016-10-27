@@ -14,8 +14,9 @@ jQuery(function($, undefined) {
     };
     
     $('#terminal').terminal(function(command, term) {
-        var cmd = command.split(' ')[0]; 
-        var args = command.split(' ')[1];
+        var c = command.split(';')[0];
+        var cmd = c.split(' ')[0]; 
+        var args = c.split(' ')[1];
         term.echo(eval("frontend." + cmd + "(" + args + ");"));
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
