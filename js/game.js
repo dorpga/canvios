@@ -3,7 +3,7 @@ jQuery(function($, undefined) {
 
     $('#terminal').terminal(function(command, term) {
         var code = [];
-        code = c.split(['.', ',', '#', '?', ':', '"', '(', ')']);
+        code = command.split(['.', ',', '#', '?', ':', '"', '(', ')']);
         console.log(code);
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
