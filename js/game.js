@@ -1,14 +1,10 @@
 jQuery(function($, undefined) {
     var curdir = "";
 
-    parse = function(c) {
+    $('#terminal').terminal(function(command, term) {
         var code = [];
         code = c.split(['.', ',', '#', '?', ':', '"', '(', ')']);
         console.log(code);
-    }
-
-    $('#terminal').terminal(function(command, term) {
-        term.echo(parse(command));
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
         name: 'terminal',
