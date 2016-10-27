@@ -1,6 +1,6 @@
+var CONDITION_STATEMENTS = ['=', '!=', '>', '<', '<=', '>='];
 jQuery(function($, undefined) {
     var curdir = "";
-    var CONDITION_STATEMENTS = ['=', '!=', '>', '<', '<=', '>='];
     $('#terminal').terminal(function(command, term) {
         var c = command.split(';')[0];
         var cmd = c.split(' ')[0]; 
