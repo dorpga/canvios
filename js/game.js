@@ -1,17 +1,15 @@
+var curdir = "";
+var parser = {}
+
+parser.parse = function(c) {
+    var code = [];
+    code = c.split(['.', ',', '#', '?', ':', '"', '(', ')']);
+    console.log(code);
+}
+
 jQuery(function($, undefined) {
     $('#terminal').terminal(function(command, term) {
-        if (command !== '') {
-            try {
-                var result = window.eval(command);
-                if (result !== undefined) {
-                    term.echo(new String(result));
-                }
-            } catch(e) {
-                term.error(new String(e));
-            }
-        } else {
-           term.echo('');
-        }
+        term.echo(parse(command));
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
         name: 'terminal',
