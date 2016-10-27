@@ -1,8 +1,7 @@
 jQuery(function($, undefined) {
     var curdir = "";
-    var parser = {}
 
-    parser.parse = function(c) {
+    parse = function(c) {
         var code = [];
         code = c.split(['.', ',', '#', '?', ':', '"', '(', ')']);
         console.log(code);
