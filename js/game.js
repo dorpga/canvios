@@ -1,4 +1,7 @@
-var CONDITION_STATEMENTS = ['=', '!=', '>', '<', '<=', '>='];
+var CONDITION_STATEMENTS = ['==', '!=', '>', '<', '<=', '>='];
+var flags = [];
+var vars = [];
+
 jQuery(function($, undefined) {
     var curdir = "";
     $('#terminal').terminal(function(command, term) {
@@ -17,8 +20,17 @@ jQuery(function($, undefined) {
                 break;
             case "?":
                 var i = 0;
+                var a = "";
                 while (!CONDITION_STATEMENTS.includes(args[0][i])) {
+                    a.append(args[0][i])
+                    i++;
                 }
+                var b = args[0][i];
+                var c = args[0].split(b)[1];
+                switch (b) {
+                    
+                }
+                flags['iftrue'] = (a == c);
         }
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
