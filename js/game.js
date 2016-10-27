@@ -20,7 +20,7 @@ jQuery(function($, undefined) {
     }, {
         greetings: 'Welcome to the CanviOS Alpha!',
         name: 'terminal',
-        height: 700,
+        height: 500,
         prompt: '> '
     });
 });
